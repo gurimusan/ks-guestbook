@@ -1,11 +1,17 @@
 apiVersion: 0.3.0
 environments:
-  default:
+  dev:
     destination:
       namespace: ks-dev
       server: https://192.168.99.100:8443
     k8sVersion: v1.12.4
-    path: default
+    path: dev
+  prod:
+    destination:
+      namespace: ks-prod
+      server: https://192.168.99.100:8443
+    k8sVersion: v1.12.4
+    path: prod
 kind: ksonnet.io/app
 libraries:
   incubator/redis:
